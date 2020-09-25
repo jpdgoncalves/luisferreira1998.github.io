@@ -1,0 +1,36 @@
+.dropdown {
+    --list-item-size: 50px;
+    --transition-duration: .2s;
+    position: relative;
+}
+
+.dropdown .dropdown-title {
+    display: block;
+    cursor: pointer;
+    height: var(--list-item-size);
+}
+
+.dropdown ul.dropdown-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    position: absolute;
+    top: var(--list-item-size);
+    width: 100%;
+}
+
+.dropdown ul.dropdown-content > li {
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition-duration) linear;
+}
+
+.dropdown ul.dropdown-content > li:hover {
+    cursor: pointer;
+    filter: brightness(150%);
+}
+
+.dropdown.active > ul.dropdown-content > li {
+    height: var(--list-item-size);
+}

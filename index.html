@@ -3,16 +3,18 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/responsive-fonts.css">
+    <link rel="stylesheet" href="./src/css/dropdown-js.css">
     <link rel="stylesheet" href="./index.css">
-    <script src="./index.js"></script>
+    <script type="module" src="src/js/dropdown-js.js"></script>
+    <script type="module" src="./index.js"></script>
 </head>
 
 <body>
     <main>
         <!-- Welcome Section-->
         <section class="welcome">
-            <!--Welcome Content-->
-            <div class="content">
+            <div class="welcome-content responsive-fonts">
                 <h1>Welcome to my page</h1>
                 <p>Down below you will find projects I have worked on</p>
             </div>
@@ -21,12 +23,54 @@
         <!-- List of projects-->
         <section class="projects">
             <!-- Filter options-->
-            <div>
-                
+            <div class="filter-options">
+                <div class="dropdown" style="z-index: 2;">
+                    <div class="dropdown-title">
+                        <div class="centered-y">
+                            <span>Language Filter...</span>
+                        </div>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li>
+                            <div class="centered-y">
+                                <span>Javascript</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <div class="dropdown-title">
+                        <div class="centered-y">
+                            <span>Tag Filter...</span>
+                        </div>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li>
+                            <div class="centered-y">
+                                <span>Repository</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="centered-y">
+                                <span>Download</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="centered-y">
+                                <span>Demo</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="centered-y">
+                                <span>Documentation</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Projects Display-->
-            <div>
+            <div class="projects-display">
 
             </div>
         </section>

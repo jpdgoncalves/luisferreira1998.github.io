@@ -25,6 +25,14 @@ html, body {
     --secondary-background-color: #444444;
     --main-text-color: #2CD0F4;
     --secondary-text-color: #ffffff;
+    --green-color: #2CF4AC;
+    --ligh-blue-color: #2CD0F4;
+    --dark-blue-color: #2C58F4;
+    --purple-color: #A82CF4; 
+}
+
+body {
+    background-color: var(--secondary-background-color);
 }
 
 
@@ -35,31 +43,28 @@ section.welcome {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+
 }
 
-section.welcome > div.content {
+section.welcome > div.welcome-content {
+    background-color: rgba(0, 0, 0, 0.3);
     height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 50% 50%;
     align-items: center;
-    
-    background-color: rgba(0, 0, 0, 0.1);
 }
 
-section.welcome > div.content > h1 {
+section.welcome > div.welcome-content > h1 {
     margin: 0;
-    padding: 0 25px 50px 25px;
+    padding: 0 25px 0 25px;
     font-weight: bold;
-    font-size: 200%;
     color: var(--main-text-color);
     text-align: center;
 }
 
-section.welcome > div.content > p {
+section.welcome > div.welcome-content > p {
     margin: 0;
-    padding: 0 25px 50px 25px;
+    padding: 0 25px 0 25px;
     color: var(--secondary-text-color);
     text-align: center;
 }
@@ -68,4 +73,42 @@ section.welcome > div.content > p {
 
 section.projects {
     background-color: var(--secondary-background-color);
+}
+
+div.filter-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+    gap: 25px;
+
+    padding: 25px;
+}
+
+.centered-y {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.dropdown-title {
+    color: var(--main-text-color);
+    background-color: var(--main-background-color);
+}
+
+.dropdown-title span {
+    padding-left: 25px;
+}
+
+.dropdown-content li {
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-background-color);
+}
+
+.dropdown-content li span {
+    padding-left: 25px;
+}
+
+
+div.projects-display {
+    padding-top: 25px;
 }

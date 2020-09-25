@@ -1,0 +1,73 @@
+
+:root {
+    --responsive-font-size: 32px;
+}
+
+/*
+Below are media queries to control the variable --responsive-font-size.
+Change them to your liking
+*/
+
+@media (max-width: 900px) {
+    :root {
+        --responsive-font-size: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --responsive-font-size: 16px;
+    }
+}
+
+/*
+Responsive fonts classes
+*/
+
+.responsive-fonts h1 {
+    font-size: calc(var(--responsive-font-size) * 2);
+}
+
+.responsive-fonts h2 {
+    font-size: calc(var(--responsive-font-size) * 1.5);
+}
+
+.responsive-fonts h3 {
+    font-size: calc(var(--responsive-font-size) * 1.17);
+}
+
+.responsive-fonts h4 {
+    font-size: var(--responsive-font-size);
+}
+
+.responsive-fonts h5 {
+    font-size: calc(var(--responsive-font-size) * .83);
+}
+
+.responsive-fonts h6 {
+    font-size: calc(var(--responsive-font-size) * .67);
+}
+
+.rf-h1 {
+    font-size: calc(var(--responsive-font-size) * 2);
+}
+
+.rf-h2 {
+    font-size: calc(var(--responsive-font-size) * 1.5);
+}
+
+.rf-h3 {
+    font-size: calc(var(--responsive-font-size) * 1.17);
+}
+
+.rf-h4 {
+    font-size: var(--responsive-font-size);
+}
+
+.rf-h5 {
+    font-size: calc(var(--responsive-font-size) * .83);
+}
+
+.rf-h6 {
+    font-size: calc(var(--responsive-font-size) * .67);
+}
