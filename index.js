@@ -1,8 +1,3 @@
-/**
- * @type {MutationObserver[]}
- */
-const MutationObservers = [];
-
 function setup() {
     /**
      * @type {HTMLElement[]}
@@ -10,13 +5,6 @@ function setup() {
     const dropdowns = document.querySelectorAll(".dropdown");
 
     for(let dropdown of dropdowns) {
-        const mutationObserver = new MutationObserver(onDropdownClassChange);
-        mutationObserver.observe(dropdown, {
-            attributes: true,
-            attributeFilter: ["class"]
-        });
-        MutationObservers.push(mutationObserver);
-
         const options = dropdown.children[1].children;
 
         for(let option of options) {
@@ -25,14 +13,6 @@ function setup() {
             });
         }
     }
-}
-
-/**
- * 
- * @param {MutationRecord} records 
- */
-function onDropdownClassChange(records) {
-    console.log(records);
 }
 
 document.addEventListener("DOMContentLoaded", setup);
