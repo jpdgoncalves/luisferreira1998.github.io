@@ -27,9 +27,41 @@ html, body {
     --main-text-color: #2CD0F4;
     --secondary-text-color: #ffffff;
     --green-color: #2CF4AC;
-    --ligh-blue-color: #2CD0F4;
+    --light-blue-color: #2CD0F4;
     --dark-blue-color: #2C58F4;
     --purple-color: #A82CF4; 
+}
+
+.text-green {
+    color: var(--green-color);
+}
+
+.text-light-blue {
+    color: var(--light-blue-color);
+}
+
+.text-dark-blue {
+    color: var(--dark-blue-color);
+}
+
+.text-purple {
+    color: var(--purple-color);
+}
+
+.border-green {
+    border-color: var(--green-color);
+}
+
+.border-light-blue {
+    border-color: var(--light-blue-color);
+}
+
+.border-purple {
+    border-color: var(--purple-color);
+}
+
+.border-dark-blue {
+    border-color: var(--dark-blue-color);
 }
 
 body {
@@ -105,7 +137,13 @@ div.filter-options {
     padding-right: 25px;
 }
 
-.dropdown-title:hover {
+@media (pointer: fine) {
+    .dropdown-title:hover {
+        filter: brightness(150%);
+    }
+}
+
+.dropdown.active .dropdown-title {
     filter: brightness(150%);
 }
 
@@ -130,6 +168,78 @@ div.filter-options {
 }
 
 
+
 div.projects-display {
-    padding-top: 25px;
+    box-sizing: border-box;
+    padding: 25px;
+    min-height: 250px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+div.projects-display:empty {
+    background-color: var(--mid-background-color);
+}
+
+div.projects-display:empty::before {
+    color: var(--secondary-text-color);
+    text-align: center;
+    content: "No projects to display yet";
+}
+
+div.project-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto, 150px) auto auto fit-content;
+    grid-template-areas: 
+        "icon"
+        "title"
+        "body"
+        "tags";
+    background-color: var(--dark-background-color);
+}
+
+div.project-card div.project-icon {
+    grid-area: icon;
+    overflow: hidden;
+    background-color: var(--mid-background-color);
+}
+
+div.project-card div.project-icon img {
+    width: 100%;
+    height: auto;
+}
+
+div.project-card div.project-title {
+    grid-area: title;
+    color: var(--main-text-color);
+    padding: 25px 12.5px 25px 12.5px;
+}
+
+div.project-card div.project-title h1 {
+    margin: 0;
+}
+
+div.project-card div.project-body {
+    grid-area: body;
+    color: var(--secondary-text-color);
+    padding: 0px 12.5px 25px 12.5px;
+}
+
+div.project-card div.project-tags {
+    grid-area: tags;
+    box-sizing: border-box;
+    padding:  0px 12.5px 25px 12.5px;
+}
+
+div.project-card div.project-tags span.project-tag {
+    display: inline-block;
+    height: 1.3em;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    background-color: var(--mid-background-color);
+    border: 1px solid;
+    border-radius: calc(1.3em + 5px);
 }
