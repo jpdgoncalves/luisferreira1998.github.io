@@ -191,7 +191,7 @@ div.projects-display:empty::before {
 div.project-card {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(auto, 150px) auto auto fit-content;
+    grid-template-rows: minmax(auto, 150px) auto auto auto;
     grid-template-areas: 
         "icon"
         "title"
@@ -242,4 +242,32 @@ div.project-card div.project-tags span.project-tag {
     background-color: var(--mid-background-color);
     border: 1px solid;
     border-radius: calc(1.3em + 5px);
+}
+
+@media (min-width: 600px) {
+    div.project-card {
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 50px 200px minmax(50px, min-content);
+        grid-template-areas: 
+            "icon title title title"
+            "icon body body body"
+            "icon tags tags tags";   
+    }
+
+    div.project-card div.project-icon {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    div.project-card div.project-title {
+        padding: 25px 12.5px 0px 12.5px;
+    }
+
+    div.project-card div.project-body {
+        padding-top: 25px;
+    }
+
+    
 }
