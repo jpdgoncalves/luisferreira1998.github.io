@@ -267,6 +267,7 @@ div.project-card div.project-tags span.project-tag {
 
     div.project-card div.project-body {
         padding-top: 25px;
+        text-overflow: ellipsis;
     }
 
     
