@@ -159,14 +159,20 @@ export function displayProjectsInfo(displayer, json) {
  * @param {string} [tag] 
  */
 export function displayProjectsMatch(displayer, language, tag) {
+
+    console.log("Language: ", language);
+    console.log("Tag: ", tag);
+
     const languageFilter = language ? (project) => project.languages.indexOf(language) > -1 : (project) => true;
     const tagFilter = tag ? (project) => project.links.some( (tagURL) => tagURL.tag === tag ) : (project) => true;
     
     ProjectsInfo.forEach(
         (project, index) => {
             if(languageFilter(project) && tagFilter(project)) {
+                console.log("Displaying project", project.title);
                 displayer.children[index].style.display = "";
             } else {
+                console.log("Hiding project", project.title);
                 displayer.children[index].style.display = "none";
             }
         }
