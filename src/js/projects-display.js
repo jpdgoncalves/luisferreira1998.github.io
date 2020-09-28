@@ -111,7 +111,7 @@ function createProjectCardElement(iconElement, titleElement, bodyElement, tagsEl
  * @param {string} body 
  * @param {string[]} tags 
  */
-export function createProjectCardFromJson(iconURL, title, body, tags) {
+function createProjectCardFromJSON(iconURL, title, body, tags) {
     const projectIcon = createIconElement(iconURL);
     const projectTitle = createTitleElement(title);
     const projectBody = createBodyElement(body);
@@ -124,4 +124,51 @@ export function createProjectCardFromJson(iconURL, title, body, tags) {
     );
 
     return projectCard;
+}
+
+
+
+
+
+
+
+let ProjectsInfo;
+
+
+/**
+ * 
+ * @param {HTMLElement} displayer 
+ * @param {{}} json 
+ */
+export function displayProjectsInfo(displayer, json) {
+    ProjectsInfo = json;
+
+    for(let project of json) {
+        const {title, description, iconURL, links} = project;
+        const tags = links.map((obj) => obj.tag);
+        const projectCard = createProjectCardFromJSON(iconURL, title, description, tags);
+        displayer.appendChild(projectCard);
+    }
+}
+
+
+/**
+ * 
+ * @param {HTMLElement} displayer
+ * @param {string} [language] 
+ * @param {string} [tag] 
+ */
+export function displayProjectsMatch(displayer, language, tag) {
+    const languageFilter = language ? (project) => project.languages.indexOf(language) > -1 : (project) => true;
+    const tagFilter = tag ? (project) => project.links.some( (tagURL) => tagURL.tag === tag ) : (project) => true;
+    
+    ProjectsInfo.forEach(
+        (project, index) => {
+            if(languageFilter(project) && tagFilter(project)) {
+                displayer.children[index].style.display = "";
+            } else {
+                displayer.children[index].style.display = "none";
+            }
+        }
+    );
 }
