@@ -1,4 +1,7 @@
-function setup() {
+import * as ProjectDisplay from "./src/js/projects-display.js";
+
+
+async function setup() {
     /**
      * @type {HTMLElement[]}
      */
@@ -12,6 +15,16 @@ function setup() {
                 dropdown.querySelector("span").innerText = option.querySelector("span").innerText;
             });
         }
+    }
+
+    const projectsDisplay = document.getElementById("projects-display");
+    const projectsInfo = await fetch("./res/json/projects-info.json").then((response) => response.json());
+
+    for(let project of projectsInfo) {
+        const {languages, title, description, iconURL, links} = project;
+        const tags = links.map((obj) => obj.tag);
+        const projectCard = ProjectDisplay.createProjectCardFromJson(iconURL, title, description, tags);
+        projectsDisplay.appendChild(projectCard);
     }
 }
 

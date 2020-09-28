@@ -1,8 +1,9 @@
 [
     {
-        "language" : "html/css/js",
+        "languages" : ["html", "css", "js"],
         "title": "Portfolio",
-        "description": "A page where all the projects i have worked on will be displayed on.",
+        "description": "A web page where all the projects i have worked on will be displayed on.",
+        "iconURL": "res/img/javascript-icon.svg",
         "links": [
             {
                 "tag" : "Repository",
