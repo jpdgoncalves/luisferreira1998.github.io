@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/responsive-fonts.css">
     <link rel="stylesheet" href="./src/css/dropdown-js.css">
+    <link rel="stylesheet" href="./src/css/modal.css">
     <link rel="stylesheet" href="./index.css">
     <script type="module" src="src/js/dropdown-js.js"></script>
     <script type="module" src="src/js/projects-display.js"></script>
+    <script type="module" src="src/js/modal.js"></script>
     <script type="module" src="./index.js"></script>
 </head>
 
 <body>
+    <div class="modal" data-modal-name="project-details">
+        <div class="modal-content" id="project-details">
+            <h1 class="modal-title rf-h2"></h1>
+            <div class="modal-body"></div>
+            <div class="modal-links">
+                <a href="#" target="_blank" id="Repository" style="background-color: var(--light-blue-color);" rel="noreferrer noopener">Repository</a>
+                <a href="#" target="_blank" id="Download" style="background-color: var(--green-color);" rel="noreferrer noopener">Download</a>
+                <a href="#" target="_blank" id="Demo" style="background-color: var(--purple-color);" rel="noreferrer noopener">Demo</a>
+                <a href="#" target="_blank" id="Documentation" style="background-color: var(--dark-blue-color);" rel="noreferrer noopener">Documentation</a>
+            </div>
+        </div>
+    </div>
     <main>
         <!-- Welcome Section-->
         <section class="welcome">
@@ -85,8 +99,7 @@
             </div>
 
             <!-- Projects Display-->
-            <div class="projects-display" id="projects-display">
-                <!-- <div class="project-card">
+            <div class="projects-display" id="projects-display"><!-- <div class="project-card">
                     <div class="project-icon">
                         <img src="./res/img/javascript-icon.svg" />
                     </div>

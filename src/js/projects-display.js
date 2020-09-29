@@ -138,15 +138,17 @@ let ProjectsInfo;
 /**
  * 
  * @param {HTMLElement} displayer 
- * @param {{}} json 
+ * @param {{}} json
+ * @param {function(MouseEvent): void} clickHandler
  */
-export function displayProjectsInfo(displayer, json) {
+export function displayProjectsInfo(displayer, json, clickHandler) {
     ProjectsInfo = json;
 
     for(let project of json) {
         const {title, description, iconURL, links} = project;
         const tags = links.map((obj) => obj.tag);
         const projectCard = createProjectCardFromJSON(iconURL, title, description, tags);
+        projectCard.addEventListener("click", () => {clickHandler(project);});
         displayer.appendChild(projectCard);
     }
 }

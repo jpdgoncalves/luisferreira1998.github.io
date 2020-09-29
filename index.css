@@ -272,3 +272,46 @@ div.project-card div.project-tags span.project-tag {
 
     
 }
+
+
+
+div.modal-content {
+    background-color: #000000;
+    border-radius: 25px;
+    padding: 25px;
+    margin: 25px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+}
+
+h1.modal-title {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 25px;
+    color: var(--main-text-color);
+}
+
+div.modal-body {
+    color: var(--secondary-text-color);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+div.modal-links {
+    color: var(--secondary-text-color);
+}
+
+div.modal-links a {
+    display: none;
+    text-decoration: none;
+    padding: 12px 25px 12px 25px;
+    border-radius: 12.5px;
+    color: var(--secondary-text-color);
+}
+
+div.modal-links a.display {
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}

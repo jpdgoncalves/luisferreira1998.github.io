@@ -7,18 +7,14 @@
         "links": [
             {
                 "tag" : "Repository",
-                "link": "https://luisferreira1998.github.io/"
+                "link": "https://github.com/luisferreira1998/luisferreira1998.github.io"
             },
             {
                 "tag" : "Download",
-                "link": "https://luisferreira1998.github.io/"
+                "link": "https://github.com/luisferreira1998/luisferreira1998.github.io"
             },
             {
                 "tag" : "Demo",
-                "link": "https://luisferreira1998.github.io/"
-            },
-            {
-                "tag" : "Documentation",
                 "link": "https://luisferreira1998.github.io/"
             }
         ]

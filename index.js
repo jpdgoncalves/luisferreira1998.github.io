@@ -1,4 +1,5 @@
 import * as ProjectsDisplay from "./src/js/projects-display.js";
+import * as ProjectDetails from "./src/js/project-details.js";
 
 
 async function setup() {
@@ -30,11 +31,11 @@ async function setup() {
         });
     }
 
-    ProjectsDisplay.displayProjectsInfo(projectsDisplay, projectsInfo);
+    ProjectsDisplay.displayProjectsInfo(projectsDisplay, projectsInfo, (project) => {
+        ProjectDetails.showModal(project.title, project.description, project.links);
+    });
 }
 
 document.addEventListener("DOMContentLoaded", setup);
 
-//TODO Append listeners to the list items of the dropdowns
-//TODO Hide display cards which do not meet the requirements choosen at the dropdowns
 //TODO Display modal when a project card is clicked
