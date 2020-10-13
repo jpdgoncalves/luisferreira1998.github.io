@@ -200,6 +200,10 @@ div.project-card {
     background-color: var(--dark-background-color);
 }
 
+div.projects-display > div.project-card:nth-child(n+2) {
+    margin-top: 25px;
+}
+
 div.project-card div.project-icon {
     grid-area: icon;
     overflow: hidden;

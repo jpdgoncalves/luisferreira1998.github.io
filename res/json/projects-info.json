@@ -18,5 +18,21 @@
                 "link": "https://luisferreira1998.github.io/"
             }
         ]
+    },
+    {
+        "languages" : ["batch", "csharp"],
+        "title": "Search Engine in C#",
+        "description": "Teaching myself C# by building a simple search engine. I will be following a Information Retrieval Book available at https://nlp.stanford.edu/IR-book/information-retrieval-book.html",
+        "iconURL": "res/img/csharp-icon.svg",
+        "links": [
+            {
+                "tag" : "Repository",
+                "link": "https://github.com/luisferreira1998/search-engine-c-sharp"
+            },
+            {
+                "tag" : "Download",
+                "link": "https://github.com/luisferreira1998/search-engine-c-sharp"
+            }
+        ]
     }
 ]
