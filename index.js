@@ -37,5 +37,3 @@ async function setup() {
 }
 
 document.addEventListener("DOMContentLoaded", setup);
-
-//TODO Display modal when a project card is clicked

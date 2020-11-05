@@ -34,5 +34,21 @@
                 "link": "https://github.com/luisferreira1998/search-engine-c-sharp"
             }
         ]
+    },
+    {
+        "languages" : ["python"],
+        "title": "Information Retrieval Assigments",
+        "description": "Assigments done within the context of Information Retrieval course.",
+        "iconURL": "res/img/python-icon.svg",
+        "links": [
+            {
+                "tag": "Repository",
+                "link": ""
+            },
+            {
+                "tag": "Download",
+                "link": ""
+            }
+        ]
     }
 ]
