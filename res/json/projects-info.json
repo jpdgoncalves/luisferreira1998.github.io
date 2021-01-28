@@ -50,5 +50,21 @@
                 "link": "https://github.com/luisferreira1998/Information-Retrieval-Course"
             }
         ]
+    },
+    {
+        "languages" : ["python"],
+        "title": "Information Retrieval Project",
+        "description": "Project done within the context of Information Retrieval course.",
+        "iconURL": "res/img/python-icon.svg",
+        "links": [
+            {
+                "tag": "Repository",
+                "link": "https://github.com/luisferreira1998/information-retrieval-2"
+            },
+            {
+                "tag": "Download",
+                "link": "https://github.com/luisferreira1998/information-retrieval-2"
+            }
+        ]
     }
 ]
